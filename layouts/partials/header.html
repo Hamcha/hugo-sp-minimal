@@ -10,7 +10,13 @@
   {{ end }}
 
   {{ with .Site.Params.description }}
-    <p class="text-right remove-margin-bottom add-padding-right">{{ . | markdownify }}</p>
+    <p class="text-right add-padding-right">{{ . | markdownify }}</p>
+  {{ end }}
+
+  {{ range .Site.Menus.main.ByWeight }}
+    <p class="text-right min-margin-bottom add-padding-right">
+      <a title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
+    </p>
   {{ end }}
 </header>
 

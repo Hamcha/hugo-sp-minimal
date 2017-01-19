@@ -269,3 +269,7 @@ footer {
     color:#444;
   }
 }
+
+.min-margin-bottom {
+  margin-bottom: 0.5rem;
+}
